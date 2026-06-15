@@ -1,0 +1,16 @@
+{
+  "name": "family-ai-scam-defense-kit",
+  "version": "1.0.0",
+  "description": "Professional HTML-to-PDF product: The 2026 Family AI Scam Defense Kit.",
+  "main": "src/index.html",
+  "scripts": {
+    "preview": "node scripts/preview.js",
+    "pdf": "node scripts/generate-pdf.js",
+    "build": "npm run pdf",
+    "check": "node scripts/check.js"
+  },
+  "dependencies": {
+    "playwright": "^1.56.1"
+  },
+  "devDependencies": {}
+}
