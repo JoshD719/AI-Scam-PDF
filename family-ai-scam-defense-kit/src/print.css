@@ -1,0 +1,57 @@
+@page {
+  size: Letter;
+  margin: 0.48in 0.46in 0.62in;
+}
+
+* { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+body { background: white; color: #111827; }
+#topNav, .print-page { display: none !important; }
+main { max-width: none; box-shadow: none; }
+a { color: #174ea6; text-decoration: none; }
+
+.cover {
+  height: 9.85in;
+  min-height: 9.85in;
+  page-break-after: always;
+  padding: 0.72in;
+}
+.cover h1 { font-size: 55px; }
+.cover h2 { font-size: 21px; }
+.cover-card { background: rgba(255,255,255,.12); }
+
+.chapter, .printable, .divider {
+  padding: 0.28in 0.18in;
+  border-bottom: 0;
+  page-break-after: always;
+}
+.chapter { min-height: 9.1in; }
+.printable { min-height: 9.15in; }
+.divider { height: 9.15in; min-height: 9.15in; }
+
+h2 { font-size: 30px; break-after: avoid; }
+h3 { font-size: 18px; break-after: avoid; }
+h4 { font-size: 14px; break-after: avoid; }
+p, li, label, td, th { font-size: 11.2px; }
+.promise { font-size: 14px; }
+
+.panel, .worksheet, .why-box, .decision-tree, .script-card, .business-log, .scenario, .notes-box, .quick-start, .disclaimer, table {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  box-shadow: none;
+}
+.grid { gap: 10px; }
+.panel, .worksheet, .why-box, .decision-tree, .script-card, .business-log, .scenario, .notes-box, .quick-start, .disclaimer { padding: 12px; border-radius: 12px; }
+.check { margin: 5px 0; }
+.check input { appearance: none; width: 11px; height: 11px; border: 1.5px solid #111827; border-radius: 2px; }
+.write-line { height: 20px; }
+.notes-box { min-height: 150px; }
+.toc-list { gap: 7px; }
+.toc-list a { padding: 9px 12px; }
+.toc-list em { font-size: 10px; }
+.wallet-card { min-height: 96px; }
+td, th { padding: 6px; }
+.poster-line { padding: 10px; font-size: 12px; }
+
+@media print {
+  .keep-together { break-inside: avoid; page-break-inside: avoid; }
+}
